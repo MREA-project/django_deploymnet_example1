@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HELP page then Image one</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
+</head>
+<body>
+<h1> Hi dj level 2</h1>
+<h2> Here are your elements</h2>
+
+<div class="djangotwo">
+    {% if access_records %}
+    <table>
+        <thead>
+        <tr>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+        </tr>
+        </thead>
+
+        {% for acc in access_records %}
+
+        <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{acc.date }}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>NO ACCESS RECORDS FOUND</p>
+
+    {% endif %}
+</div>
+{{ help_insert }}
+<h1>
+    this is a pic of pr
+</h1>
+</body>
+</html>
